@@ -30,6 +30,7 @@ class TopicsController extends Controller
     {
         // URL 矫正
         if ( ! empty($topic->slug) && $topic->slug != $request->slug) {
+            session()->reflash();   //https://learnku.com/laravel/t/32183 我的 “帖子创建成功” 提示信息去哪儿了 ？？？
             return redirect($topic->link(), 301);
         }
 
