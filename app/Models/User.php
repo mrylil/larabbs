@@ -28,6 +28,8 @@ class User extends Authenticatable implements MustVerifyEmail
 
     use Traits\ActiveUserHelper;
 
+    use Traits\LastActivedAtHelper;
+
 
 
     /**
